@@ -31,10 +31,10 @@ var server = new WebpackDevServer(
     hot: true,
     liveReload: false,
     client: {
-      webSocketTransport: 'sockjs',
+      webSocketTransport: 'ws',
     },
-    webSocketServer: 'sockjs',
-    host: 'localhost',
+    webSocketServer: 'ws',
+    host: '127.0.0.1',
     port: env.PORT,
     static: {
       directory: path.join(__dirname, '../build'),
